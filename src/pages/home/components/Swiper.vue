@@ -17,7 +17,9 @@ export default {
         return {
             swiperOption: {
                 pagination: '.swiper-pagination',
-                loop: true  //循环轮播
+                loop: true,  //循环轮播
+                autoplay: 3000, //自动播放
+                autoplayDisableOnInteraction: false  //触摸后重新启动自动播放
             },
             swiperList: [{
                 id: '0001',

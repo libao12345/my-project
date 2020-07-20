@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper>
+        <swiper :options="swiperOption">
             <swiper-slide v-for="(page, index) of pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
@@ -18,6 +18,9 @@ export default {
     name: 'HomeIcons',
     data() {
         return {
+            swiperOption: {
+                pagination: '.swiper-pagination',
+            },
             iconList: [{
                 id: '0001',
                 imgUrl: 'https://picbed.qunarzz.com/01d2f57f920666364197a850dab859a8.png',
@@ -29,7 +32,7 @@ export default {
             },{
                 id: '0003',
                 imgUrl: 'https://picbed.qunarzz.com/1e107321f5396ea4994cd832232ecf8a.png',
-                desc: '驾车自驾'
+                desc: '旅游团购'
             },{
                 id: '0004',
                 imgUrl: 'https://picbed.qunarzz.com/c65b3bb7571a6bd62df669213e44b84d.png',
