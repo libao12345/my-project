@@ -38,10 +38,10 @@ export default {
     .wrapper >>> .swiper-pagination-bullet-active  // 样式穿透
         background #fff
     .wrapper
-        //overflow hidden
+        overflow hidden
         width 100%
         height 0
-        padding-button 31.25%
+        padding-bottom 31.25%
         background #eee
         .swiper-img
             width 100%
