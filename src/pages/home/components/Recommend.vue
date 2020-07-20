@@ -4,7 +4,7 @@
             热销推荐
         </div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommentList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <div class="item-img-wrapper">
                     <img class="item-img" :src="item.imgUrl" />
                 </div>
@@ -21,25 +21,8 @@
 <script>
 export default {
     name: 'HomeRecommend',
-    data() {
-        return {
-            recommentList: [{
-                id: '00001',
-                imgUrl: 'https://img1.qunarzz.com/sight/p0/2005/39/3979f1867defec4ea3.water.jpg_256x160_6ae804bb.jpg',
-                title: '八达岭长城',
-                desc: '一定要看那块“不到长城非好汉”碑'
-            },{
-                id: '00002',
-                imgUrl: 'https://img1.qunarzz.com/sight/p0/2005/39/3979f1867defec4ea3.water.jpg_256x160_6ae804bb.jpg',
-                title: '八达岭长城',
-                desc: '一定要看那块“不到长城非好汉”碑'
-            },{
-                id: '00003',
-                imgUrl: 'https://img1.qunarzz.com/sight/p0/2005/39/3979f1867defec4ea3.water.jpg_256x160_6ae804bb.jpg',
-                title: '八达岭长城',
-                desc: '一定要看那块“不到长城非好汉”碑'
-            }]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
