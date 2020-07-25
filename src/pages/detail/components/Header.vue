@@ -48,6 +48,9 @@ export default {
     },
     activated() {
         window.addEventListener('scroll', this.handleScroll)
+    },
+    deactivated() { //对全局时间进行解绑
+        window.removeEventListener('scroll', this.handleScroll)
     }
 }
 </script>
