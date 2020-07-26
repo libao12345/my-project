@@ -69,11 +69,17 @@ export default {
             //this.$store.commit('changeCity', city)
             this.changeCity(city)
             this.$router.push('/')  //编程式页面跳转
+            //this.keyword = ''
+
         },
         ...mapMutations(['changeCity'])
     },
     mounted() {
-        this.scroll = new Bscroll(this.$refs.search)
+        this.scroll = new Bscroll(this.$refs.search, {
+            mouseWheel: true,
+            click: true,
+            tap: true
+        })
     }
 }
 </script>
