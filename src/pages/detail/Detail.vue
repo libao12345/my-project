@@ -29,7 +29,8 @@ export default {
             sightName: '',
             bannerImg: '',
             gallaryImgs: [],
-            list: []
+            list: [],
+            idList: []
         }
     },
     methods: {
@@ -53,6 +54,16 @@ export default {
     },
     mounted() {
         this.getDetailInfo()
+        this.idList.push(this.$route.params.id) // idList临时缓冲变量数组
+    },
+    activated() { // 每次组件被激活就调用
+        const newId = this.$route.params.id
+        if(this.idList.indexOf(newId) > -1) { //判断当前id不在IdList中，发起请求
+            return
+        } else {
+            this.getDetailInfo();
+            this.idList.push(newId) 
+        }      
     }
 }
 </script>
