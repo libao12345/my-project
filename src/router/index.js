@@ -24,7 +24,10 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {  //页面切换始终回到最顶部
+    return { x: 0, y: 0 }
+  }  
 })
 
 export default router
